@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap')
+
+* 
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+	border: 0
+
+$width-mobile: 675px
+$width-desktop: 1440px
+
+$color-primary-1: hsl(0, 100%, 74%) 
+$color-primary-2: hsl(0, 100%, 74%) 
+
+$color-accent: hsl(248, 32%, 49%)
+$color-accent-2: #66C88F
+
+
+$color-neutral-1: hsl(249, 10%, 26%)
+$color-neutral-2: hsl(246, 25%, 77%)
+
+$font-size-body: 16px
+$font-size-terms: 10px
+$font-family: Poppins, sans-serif
+
+
+body 
+	background-color: $color-primary-1
+	font: $font-size-body $font-family
+	color: rgba(294, 244, 244, 1)
+	background-image: url("../assets/images/bg-intro-desktop.png")
+	display: flex
+	flex-wrap: wrap
+	text-align: center
+	width: 100%
+	height: 100%
+
+// .main-heading
+// 	text-align: center
+
+// .section
+	// display: flex
+
+.section-two
+	display: flex
+	flex-wrap: wrap
+	.call-to-action, .form, .terms-agreement
+		width: 100%
+
+.call-to-action
+	margin-bottom: 20px
+
+.btn
+	width: 100%
+
+.btn-accent
+	border-radius: 10px
+	background-color: $color-accent
+	box-shadow: 0 7px rgba(0, 0, 0, 0.2)
+	font-size: 0.9em
+	padding: 17px 50px
+	span
+		opacity: 0.9
+
+// !TODO: add hover/click animation
+.btn-accent-2
+	border-radius: 5px
+	background-color: $color-accent-2
+	color: rgba(294, 294, 294, 0.9)
+	height: 50px
+	text-transform: uppercase
+	font-size: 14px
+	box-shadow: 0 3px #58AD7C
+
+// !TODO: add terms span hover style
+.form
+	border-radius: 10px
+	background-color: white
+	padding: 20px
+	height: 440px
+	box-shadow: 0 7px rgba(0, 0, 0, 0.25)
+	display: flex
+	width: 100%
+	flex-wrap: wrap
+	.reg-fields
+		width: 100%
+		margin-bottom: 5px
+		height: 5em
+		border: 1px solid #E4E4E4
+		border-radius: 5px
+		padding-left: 15px
+		font: inherit
+		font-weight: 700
+		font-size: 12px
+	.terms-agreement
+		color: $color-neutral-2
+		padding: 0	11px
+		line-height: 20px
+		font-size: $font-size-terms
+		a
+			color: $color-primary-1
+			text-decoration: none
+			font-weight: 700
+
+
+// ====================================
+// 				DESKTOP
+// ====================================
+@media(min-width: $width-mobile)
+	body
+		padding: 94px 64px
+		height: 1vh
+	.section
+		width: 45%
+		margin: 10% auto auto
+		vertical-align: center
+		max-width: 474px
+
+	.section-first
+		margin-right: 5px
+		text-align: left
+		.main-heading
+			margin-bottom: 20px
+			margin-top: 30%
+			max-width: 460px
+	.section-two
+		margin-left: auto
+	.main-heading
+		font-size: 35px
+
+
+// ====================================
+// 				MOBILE
+// ====================================
+@media(max-width: $width-mobile)
+	body
+		background-image: url("../assets/images/bg-intro-mobile.png")
+		background-repeat: no-repeat
+		background-position: center
+		background-size: cover
+		padding: 94px 64px
+
+	.main-heading
+		margin-bottom: 25px
+
+	.section
+		width: 100%
+		margin-bottom: 50px
+		flex-basis: 100%
+
+	footer
+		flex-basis: 100%
+
